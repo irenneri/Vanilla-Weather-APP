@@ -13,18 +13,18 @@
         <div class="weather-app-wrapper">
             <div class="weather-app">
                 <div class="overview">
-                    <h1>Kyiv</h1>
+                    <h1 id="city"></h1>
                     <ul>
                         <li>Tuesday 23:45</li>
-                        <li>Rainy</li>
+                        <li id="description"></li>
                     </ul>
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <div class="clearfix weather-temperature">
-                            <img src="images/rain_light.png" alt="rain_light" class="float-left"/> 
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="rain_light" class="float-left"/> 
                             <div class="float-left">
-                                <strong>16</strong>
+                                <strong id="temperature"></strong>
                                 <span class="units">°C | <a href="">°F</a></span> 
                             </div>
                         </div>
@@ -32,13 +32,10 @@
                     <div class="col-6">
                         <ul>
                             <li>
-                                Precipitation: 0%
+                                Humidity: <span id="humidity"></span> %
                             </li>
                             <li>
-                                Humidity: 73%
-                            </li>
-                            <li>
-                                Wind: 19 km/h
+                                Wind: <span id="wind"></span> km/h
                             </li>
                         </ul>
                     </div>
