@@ -1,63 +1,77 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/styles.css">
-    <title>Vanilla Weather App</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="src/styles.css">
+        <title>Vanilla Weather App</title>
   </head>
   <body>
-    <div class="container">
-        <div class="weather-app-wrapper">
-            <div class="weather-app">
-                <form id="search-form" class="mb-3">
-                    <div class="row">
-                        <div class="col-9">
-                            <input type="search" placeholder="Type a city..." class="form-control" id="city-input"/>
+        <div class="container">
+            <div class="weather-app-wrapper">
+                <div class="weather-app">
+                    <form id="search-form" class="mb-3">
+                        <div class="row">
+                            <div class="col-9">
+                                <input type="search" placeholder="Type a city..." class="form-control" id="city-input"/>
+                            </div>
+                            <div class="col-3">
+                                <input type="submit" value="Search" class="btn btn-primary w-100">
+                            </div>
                         </div>
-                        <div class="col-3">
-                            <input type="submit" value="Search" class="btn btn-primary w-100">
+                    </form>
+                    <div class="overview">
+                        <h1 id="city"></h1>
+                        <ul>
+                            <li>Last updated: <span id="date"></span> </li>
+                            <li id="description"></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="d-flex weather-temperature">
+                                <img src="" alt="rain_light" id="icon" class="float-left"/> 
+                                <div class="float-left">
+                                    <strong id="temperature"></strong>
+                                    <a href="" id="celsius-link" class="active"> °C</a> | 
+                                    <a href="" id="fahrenheit-link">°F</a> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <ul>
+                                <li>
+                                    Humidity: <span id="humidity"></span> %
+                                </li>
+                                <li>
+                                    Wind: <span id="wind"></span> km/h
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </form>
-                <div class="overview">
-                    <h1 id="city"></h1>
-                    <ul>
-                        <li>Last updated: <span id="date"></span> </li>
-                        <li id="description"></li>
-                    </ul>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="clearfix weather-temperature">
-                            <img src="" alt="rain_light" id="icon" class="float-left"/> 
-                            <div class="float-left">
-                                <strong id="temperature"></strong>
-                                <a href="" id="celsius-link" class="active"> °C</a> | 
-                                <a href="" id="fahrenheit-link">°F</a> 
+                    <div class="weather-forecast" id="forecast">
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="weather-forecast-date">
+                                    Thu
+                                </div>
+                                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="36"/>
+                                </br> 
+                                <div class="weather-forecast-temperatures">
+                                    <span class="weather-forecast-temp-max">18</span> 
+                                    <span class="weather-forecast-temp-min">12</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <ul>
-                            <li>
-                                Humidity: <span id="humidity"></span> %
-                            </li>
-                            <li>
-                                Wind: <span id="wind"></span> km/h
-                            </li>
-                        </ul>
-                    </div>
                 </div>
+                <small class="link">
+                    <a href="https://github.com/irenneri" target="_blank"> Open-source code</a> by Ira Bartosh
+                </small>
             </div>
+            <script src="src/script.js"></script>
         </div>
-        <span class="link">
-          <a href="https://github.com/irenneri" target="_blank"> Open-source code</a> by Ira Bartosh
-        </span>
-    
-    </div>
-    <script src="src/script.js"></script>
-  </body>
+    </body>
 </html>
