@@ -34,8 +34,14 @@ li:first-letter {
   text-transform: capitalize;
 }
 
-a {
+a.link {
+  color: #ffffff;
   text-decoration: none;
+}
+
+img.brave {
+  min-width: 375px;
+  max-width: 600px;
 }
 
 .brave {
@@ -45,16 +51,23 @@ a {
   margin: 0 auto;
   max-width: 600px;
   max-height: 300px;
- 
+  min-width: 375px;
 }
 
 .container {
+  padding: 25px 25px;
+  height: 425px;
+  width: 600px;
   max-width: 600px;
+  min-width: 375px;
+  border: 10px solid #ffdb00;
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
-  margin-top: 0px;
+  height: 350px;
+  width: 575px;
+  max-width: 525px;
+  min-width: 375px;
   margin-bottom: 0px;
   background-color: #ffffff ;
 }
@@ -62,8 +75,6 @@ a {
 .weather-app {
   max-width: 600px;
   padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 5px;
 }
 
 .overview {
